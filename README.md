@@ -1,15 +1,28 @@
-# algo
+# Algorithms Playground
 
-To install dependencies:
+Personal studies and exercises on algorithms and data structures.
+
+## Tech Stack
+
+- **Runtime**: [Bun](https://bun.sh) v1.3.1+
+- **Language**: TypeScript 5+
+- **Testing**: Jest 30+
+- **Linter/Formatter**: Biome 2.3.8
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have [Bun](https://bun.sh) installed on your system.
+
+### Installation
 
 ```bash
 bun install
 ```
 
-To run:
+### Running Tests
 
 ```bash
-bun run index.ts
+bun test
 ```
-
-This project was created using `bun init` in bun v1.3.1. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
