@@ -1,6 +1,6 @@
 # Algorithms Playground
 
-Personal studies and exercises on algorithms and data structures.
+Personal studies and exercises on algorithms and data structures
 
 ## Tech Stack
 
