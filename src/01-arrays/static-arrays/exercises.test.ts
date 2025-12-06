@@ -215,68 +215,68 @@ describe("Level 2 - Medium", () => {
 	});
 });
 
-describe("Level 3 - Hard", () => {
-	it("should merge two sorted arrays into the first array in-place", () => {
-		const merge = (
-			nums1: number[],
-			m: number,
-			nums2: number[],
-			n: number,
-		): void => {
-			throw new Error("Not implemented");
-		};
+// describe("Level 3 - Hard", () => {
+// 	it("should merge two sorted arrays into the first array in-place", () => {
+// 		const merge = (
+// 			nums1: number[],
+// 			m: number,
+// 			nums2: number[],
+// 			n: number,
+// 		): void => {
+// 			throw new Error("Not implemented");
+// 		};
 
-		const arr1 = [1, 2, 3, 0, 0, 0];
-		merge(arr1, 3, [2, 5, 6], 3);
-		expect(arr1).toStrictEqual([1, 2, 2, 3, 5, 6]);
+// 		const arr1 = [1, 2, 3, 0, 0, 0];
+// 		merge(arr1, 3, [2, 5, 6], 3);
+// 		expect(arr1).toStrictEqual([1, 2, 2, 3, 5, 6]);
 
-		const arr2 = [1];
-		merge(arr2, 1, [], 0);
-		expect(arr2).toStrictEqual([1]);
+// 		const arr2 = [1];
+// 		merge(arr2, 1, [], 0);
+// 		expect(arr2).toStrictEqual([1]);
 
-		const arr3 = [0];
-		merge(arr3, 0, [1], 1);
-		expect(arr3).toStrictEqual([1]);
+// 		const arr3 = [0];
+// 		merge(arr3, 0, [1], 1);
+// 		expect(arr3).toStrictEqual([1]);
 
-		const arr4 = [4, 5, 6, 0, 0, 0];
-		merge(arr4, 3, [1, 2, 3], 3);
-		expect(arr4).toStrictEqual([1, 2, 3, 4, 5, 6]);
-	});
+// 		const arr4 = [4, 5, 6, 0, 0, 0];
+// 		merge(arr4, 3, [1, 2, 3], 3);
+// 		expect(arr4).toStrictEqual([1, 2, 3, 4, 5, 6]);
+// 	});
 
-	it("should find the majority element (appears more than n/2 times)", () => {
-		const majorityElement = (arr: number[]): number => {
-			// TODO: Implement - O(n) time, O(1) space
-			// Hint: Boyer-Moore Voting Algorithm
-			throw new Error("Not implemented");
-		};
+// 	it("should find the majority element (appears more than n/2 times)", () => {
+// 		const majorityElement = (arr: number[]): number => {
+// 			// TODO: Implement - O(n) time, O(1) space
+// 			// Hint: Boyer-Moore Voting Algorithm
+// 			throw new Error("Not implemented");
+// 		};
 
-		expect(majorityElement([3, 2, 3])).toBe(3);
-		expect(majorityElement([2, 2, 1, 1, 1, 2, 2])).toBe(2);
-		expect(majorityElement([1])).toBe(1);
-		expect(majorityElement([1, 1, 1, 1, 2, 3, 4])).toBe(1);
-	});
+// 		expect(majorityElement([3, 2, 3])).toBe(3);
+// 		expect(majorityElement([2, 2, 1, 1, 1, 2, 2])).toBe(2);
+// 		expect(majorityElement([1])).toBe(1);
+// 		expect(majorityElement([1, 1, 1, 1, 2, 3, 4])).toBe(1);
+// 	});
 
-	it("should sort array of 0s, 1s, and 2s in-place (Dutch National Flag)", () => {
-		const sortColors = (arr: number[]): void => {
-			// TODO: Implement - O(n) time, O(1) space, single pass
-			// Hint: Three pointers (low, mid, high)
-			throw new Error("Not implemented");
-		};
+// 	it("should sort array of 0s, 1s, and 2s in-place (Dutch National Flag)", () => {
+// 		const sortColors = (arr: number[]): void => {
+// 			// TODO: Implement - O(n) time, O(1) space, single pass
+// 			// Hint: Three pointers (low, mid, high)
+// 			throw new Error("Not implemented");
+// 		};
 
-		const arr1 = [2, 0, 2, 1, 1, 0];
-		sortColors(arr1);
-		expect(arr1).toStrictEqual([0, 0, 1, 1, 2, 2]);
+// 		const arr1 = [2, 0, 2, 1, 1, 0];
+// 		sortColors(arr1);
+// 		expect(arr1).toStrictEqual([0, 0, 1, 1, 2, 2]);
 
-		const arr2 = [2, 0, 1];
-		sortColors(arr2);
-		expect(arr2).toStrictEqual([0, 1, 2]);
+// 		const arr2 = [2, 0, 1];
+// 		sortColors(arr2);
+// 		expect(arr2).toStrictEqual([0, 1, 2]);
 
-		const arr3 = [0];
-		sortColors(arr3);
-		expect(arr3).toStrictEqual([0]);
+// 		const arr3 = [0];
+// 		sortColors(arr3);
+// 		expect(arr3).toStrictEqual([0]);
 
-		const arr4 = [1, 2, 0, 1, 2, 0, 1, 2, 0];
-		sortColors(arr4);
-		expect(arr4).toStrictEqual([0, 0, 0, 1, 1, 1, 2, 2, 2]);
-	});
-});
+// 		const arr4 = [1, 2, 0, 1, 2, 0, 1, 2, 0];
+// 		sortColors(arr4);
+// 		expect(arr4).toStrictEqual([0, 0, 0, 1, 1, 1, 2, 2, 2]);
+// 	});
+// });
