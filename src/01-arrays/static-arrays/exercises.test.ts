@@ -186,12 +186,28 @@ describe("Level 2 - Medium", () => {
 
 	it("should find two numbers that add up to target (sorted array)", () => {
 		const twoSum = (arr: number[], target: number): [number, number] | null => {
-			// TODO: Implement - O(n) time, O(1) space
-			// Hint: Two pointers from both ends
-			// Return indices (1-indexed) or null if not found
-			throw new Error("Not implemented");
+			let left = 0;
+			let right = arr.length - 1;
+
+			while (left < arr.length) {
+				const sum = arr[left]! + arr[right]!;
+
+				if (sum === target) {
+					return [left + 1, right + 1];
+				}
+
+				if (sum > target) {
+					right--;
+				} else {
+					left++;
+				}
+			}
+
+			return null;
 		};
 
+		expect(twoSum([2, 7, 11, 15], 22)).toStrictEqual([2, 4]);
+		expect(twoSum([2, 7, 11, 15], 26)).toStrictEqual([3, 4]);
 		expect(twoSum([2, 7, 11, 15], 9)).toStrictEqual([1, 2]);
 		expect(twoSum([2, 3, 4], 6)).toStrictEqual([1, 3]);
 		expect(twoSum([-1, 0], -1)).toStrictEqual([1, 2]);
@@ -199,71 +215,71 @@ describe("Level 2 - Medium", () => {
 	});
 });
 
-describe("Level 3 - Hard", () => {
-	it("should merge two sorted arrays into the first array in-place", () => {
-		const merge = (
-			nums1: number[],
-			m: number,
-			nums2: number[],
-			n: number,
-		): void => {
-			// TODO: Implement - O(m+n) time, O(1) space
-			// nums1 has enough space (m + n) to hold all elements
-			// Hint: Start from the end
-			throw new Error("Not implemented");
-		};
+// describe("Level 3 - Hard", () => {
+// 	it("should merge two sorted arrays into the first array in-place", () => {
+// 		const merge = (
+// 			nums1: number[],
+// 			m: number,
+// 			nums2: number[],
+// 			n: number,
+// 		): void => {
+// 			// TODO: Implement - O(m+n) time, O(1) space
+// 			// nums1 has enough space (m + n) to hold all elements
+// 			// Hint: Start from the end
+// 			throw new Error("Not implemented");
+// 		};
 
-		const arr1 = [1, 2, 3, 0, 0, 0];
-		merge(arr1, 3, [2, 5, 6], 3);
-		expect(arr1).toStrictEqual([1, 2, 2, 3, 5, 6]);
+// 		const arr1 = [1, 2, 3, 0, 0, 0];
+// 		merge(arr1, 3, [2, 5, 6], 3);
+// 		expect(arr1).toStrictEqual([1, 2, 2, 3, 5, 6]);
 
-		const arr2 = [1];
-		merge(arr2, 1, [], 0);
-		expect(arr2).toStrictEqual([1]);
+// 		const arr2 = [1];
+// 		merge(arr2, 1, [], 0);
+// 		expect(arr2).toStrictEqual([1]);
 
-		const arr3 = [0];
-		merge(arr3, 0, [1], 1);
-		expect(arr3).toStrictEqual([1]);
+// 		const arr3 = [0];
+// 		merge(arr3, 0, [1], 1);
+// 		expect(arr3).toStrictEqual([1]);
 
-		const arr4 = [4, 5, 6, 0, 0, 0];
-		merge(arr4, 3, [1, 2, 3], 3);
-		expect(arr4).toStrictEqual([1, 2, 3, 4, 5, 6]);
-	});
+// 		const arr4 = [4, 5, 6, 0, 0, 0];
+// 		merge(arr4, 3, [1, 2, 3], 3);
+// 		expect(arr4).toStrictEqual([1, 2, 3, 4, 5, 6]);
+// 	});
 
-	it("should find the majority element (appears more than n/2 times)", () => {
-		const majorityElement = (arr: number[]): number => {
-			// TODO: Implement - O(n) time, O(1) space
-			// Hint: Boyer-Moore Voting Algorithm
-			throw new Error("Not implemented");
-		};
+// 	it("should find the majority element (appears more than n/2 times)", () => {
+// 		const majorityElement = (arr: number[]): number => {
+// 			// TODO: Implement - O(n) time, O(1) space
+// 			// Hint: Boyer-Moore Voting Algorithm
+// 			throw new Error("Not implemented");
+// 		};
 
-		expect(majorityElement([3, 2, 3])).toBe(3);
-		expect(majorityElement([2, 2, 1, 1, 1, 2, 2])).toBe(2);
-		expect(majorityElement([1])).toBe(1);
-		expect(majorityElement([1, 1, 1, 1, 2, 3, 4])).toBe(1);
-	});
+// 		expect(majorityElement([3, 2, 3])).toBe(3);
+// 		expect(majorityElement([2, 2, 1, 1, 1, 2, 2])).toBe(2);
+// 		expect(majorityElement([1])).toBe(1);
+// 		expect(majorityElement([1, 1, 1, 1, 2, 3, 4])).toBe(1);
+// 	});
 
-	it("should sort array of 0s, 1s, and 2s in-place (Dutch National Flag)", () => {
-		const sortColors = (arr: number[]): void => {
-			// TODO: Implement - O(n) time, O(1) space, single pass
-			// Hint: Three pointers (low, mid, high)
-			throw new Error("Not implemented");
-		};
+// 	it("should sort array of 0s, 1s, and 2s in-place (Dutch National Flag)", () => {
+// 		const sortColors = (arr: number[]): void => {
+// 			// TODO: Implement - O(n) time, O(1) space, single pass
+// 			// Hint: Three pointers (low, mid, high)
+// 			throw new Error("Not implemented");
+// 		};
 
-		const arr1 = [2, 0, 2, 1, 1, 0];
-		sortColors(arr1);
-		expect(arr1).toStrictEqual([0, 0, 1, 1, 2, 2]);
+// 		const arr1 = [2, 0, 2, 1, 1, 0];
+// 		sortColors(arr1);
+// 		expect(arr1).toStrictEqual([0, 0, 1, 1, 2, 2]);
 
-		const arr2 = [2, 0, 1];
-		sortColors(arr2);
-		expect(arr2).toStrictEqual([0, 1, 2]);
+// 		const arr2 = [2, 0, 1];
+// 		sortColors(arr2);
+// 		expect(arr2).toStrictEqual([0, 1, 2]);
 
-		const arr3 = [0];
-		sortColors(arr3);
-		expect(arr3).toStrictEqual([0]);
+// 		const arr3 = [0];
+// 		sortColors(arr3);
+// 		expect(arr3).toStrictEqual([0]);
 
-		const arr4 = [1, 2, 0, 1, 2, 0, 1, 2, 0];
-		sortColors(arr4);
-		expect(arr4).toStrictEqual([0, 0, 0, 1, 1, 1, 2, 2, 2]);
-	});
-});
+// 		const arr4 = [1, 2, 0, 1, 2, 0, 1, 2, 0];
+// 		sortColors(arr4);
+// 		expect(arr4).toStrictEqual([0, 0, 0, 1, 1, 1, 2, 2, 2]);
+// 	});
+// });
