@@ -39,7 +39,6 @@ describe("Stack tests", () => {
 			};
 
 			for (const c of s) {
-				console.log(c in closeToOpen);
 				if (c in closeToOpen) {
 					if (stack.length > 0 && stack[stack.length - 1] === closeToOpen[c]) {
 						stack.pop();
