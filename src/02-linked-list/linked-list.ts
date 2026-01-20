@@ -9,10 +9,10 @@ export class ListNode {
 }
 
 export class LinkedList {
-	constructor(
-		public head: ListNode,
-		public tail: ListNode,
-	) {
+	public head: ListNode;
+	public tail: ListNode;
+
+	constructor() {
 		this.head = new ListNode(-1);
 		this.tail = this.head;
 	}
@@ -70,5 +70,20 @@ export class LinkedList {
 		}
 
 		return res;
+	}
+
+	reverse() {
+		let curr = this.head.next;
+		let prev: ListNode | null = null;
+
+		while (curr) {
+			const nxt = curr.next!;
+			curr.next = prev;
+			prev = curr;
+			curr = nxt;
+		}
+
+		this.tail = this.head.next!;
+		this.head.next = prev;
 	}
 }
